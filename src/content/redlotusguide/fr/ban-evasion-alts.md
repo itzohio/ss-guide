@@ -7,7 +7,7 @@ Relier le joueur en cours de screenshare à un compte déjà banni demande d'exa
   - Les logs : les logs du client de jeu (`latest.log`, logs de chat), les logs de lanceurs (Lunar Client, Badlion Client) et parfois ceux des mods peuvent contenir des noms d'utilisateur ou des UUID liés aux comptes utilisés sur la machine.
   - Les fichiers de config des lanceurs : beaucoup stockent les infos de compte. Par exemple, des lanceurs custom ont un `accounts.json` ou équivalent dans leur dossier de données (`.lunarclient/`, `.feather/`, souvent dans `%appdata%` ou le dossier utilisateur sous Linux/macOS). Ça peut révéler plusieurs comptes liés à l'appareil.
   - Recherche de fichiers : les joueurs laissent parfois des noms dans des endroits inattendus — fichiers `.txt`, scripts, noms de dossiers du profil. Chercher les pseudos ou UUID bannis connus dans `C:\Users\%username%`, le Bureau, Téléchargements, Documents, et les dossiers AppData (`%appdata%`, `%localappdata%`).
-  - Scripts PowerShell pour les alts : des scripts automatisent la recherche de pseudos aux endroits habituels. Par exemple, le script ADVANCE ALT CHECK parcourt récursivement les dossiers utilisateur pour les fichiers `.txt`, `.log`, `.json`, `.jar` et cherche un pseudo donné (un alt banni connu), puis sort la liste des fichiers trouvés. Ça va beaucoup plus vite qu'une navigation manuelle.
+  - Scripts PowerShell pour les alts : des scripts automatisent la recherche de pseudos aux endroits habituels. On utilise une version française d'ADVANCE ALT CHECK : on lui donne le pseudo à chercher (l'alt banni connu), il parcourt récursivement `C:\Users` pour les fichiers `.txt`, `.log`, `.jar` et `.json`, puis écrit la liste des fichiers trouvés dans un CSV horodaté en affichant les 5 premières correspondances avec leur taille et leur date de modification. Le script est téléchargeable ici : `https://itzohio.github.io/ss-guide/sites/redlotusguide/scripts/avance-alt-check-fr.ps1`. Ça va beaucoup plus vite qu'une navigation manuelle.
 - **Analyse du registre :**
   - Profils utilisateur : chaque profil Windows a sa ruche (`NTUSER.DAT` dans `C:\Users\{username}\`). Les analyser (surtout s'il y a eu plusieurs profils) avec Registry Explorer révèle des réglages ou configs liés à d'autres comptes.
   - Clés logicielles : les clés des lanceurs, de logiciels associés (Discord) ou de composants Windows peuvent stocker des identifiants de compte, des clés de licence ou un historique d'usage qui relie plusieurs activités sur la même machine.
@@ -18,3 +18,15 @@ Relier le joueur en cours de screenshare à un compte déjà banni demande d'exa
   - Côté serveur : beaucoup de serveurs tiennent une base qui associe les comptes bannis aux HWID collectés lors des sessions ou des screenshares précédents.
   - Outils SS : certains outils (comme Echo) collectent le HWID de la machine pendant le scan. Ce HWID est ensuite comparé (automatiquement ou à la main) à la base des HWID bannis du serveur.
   - Détection : une correspondance entre le HWID de la machine actuelle et un HWID banni, c'est une preuve forte d'évasion, même avec un nouveau compte et un nouveau profil Windows. Le SSer doit savoir comment ses outils collectent le HWID et comment son serveur s'en sert pour les bans.
+
+### Lancer le script de recherche de pseudos
+
+Dans une console PowerShell en administrateur :
+
+```powershell
+Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/sites/redlotusguide/scripts/avance-alt-check-fr.ps1)
+```
+
+Le script demande le pseudo à chercher, puis affiche le nombre de fichiers trouvés et les 5 premières correspondances. La liste complète est écrite dans un fichier `ResultatsRecherche-<date>.csv` dans le dossier courant, ouvrable dans Excel.
+
+Ses limites, à garder en tête avant de conclure : un fichier trouvé n'est pas une preuve d'utilisation (un pseudo peut venir d'un log, d'un fichier copié ou d'un vieux téléchargement), un pseudo courant génère des faux positifs en masse, et les `.jar` sont des archives compressées donc la recherche de chaîne y est peu fiable. On recoupe toujours avec les dates et les artefacts d'exécution (Prefetch, BAM, SRUM, journal USN).

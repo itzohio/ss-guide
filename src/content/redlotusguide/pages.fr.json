@@ -19387,7 +19387,14 @@
                     {
                       "runs": [
                         {
-                          "v": "Scripts PowerShell pour les alts : des scripts automatisent la recherche de pseudos aux endroits habituels. Par exemple, le script ADVANCE ALT CHECK parcourt récursivement les dossiers utilisateur pour les fichiers "
+                          "v": "Scripts PowerShell pour les alts : des scripts automatisent la recherche de pseudos aux endroits habituels. On utilise une version française d'ADVANCE ALT CHECK : on lui donne le pseudo à chercher (l'alt banni connu), il parcourt récursivement "
+                        },
+                        {
+                          "v": "C:\\Users",
+                          "c": true
+                        },
+                        {
+                          "v": " pour les fichiers "
                         },
                         {
                           "v": ".txt",
@@ -19404,18 +19411,25 @@
                           "v": ", "
                         },
                         {
-                          "v": ".json",
-                          "c": true
-                        },
-                        {
-                          "v": ", "
-                        },
-                        {
                           "v": ".jar",
                           "c": true
                         },
                         {
-                          "v": " et cherche un pseudo donné (un alt banni connu), puis sort la liste des fichiers trouvés. Ça va beaucoup plus vite qu'une navigation manuelle."
+                          "v": " et "
+                        },
+                        {
+                          "v": ".json",
+                          "c": true
+                        },
+                        {
+                          "v": ", puis écrit la liste des fichiers trouvés dans un CSV horodaté en affichant les 5 premières correspondances avec leur taille et leur date de modification. Le script est téléchargeable ici : "
+                        },
+                        {
+                          "v": "https://itzohio.github.io/ss-guide/sites/redlotusguide/scripts/avance-alt-check-fr.ps1",
+                          "c": true
+                        },
+                        {
+                          "v": ". Ça va beaucoup plus vite qu'une navigation manuelle."
                         }
                       ],
                       "children": []
@@ -19547,9 +19561,68 @@
               ]
             }
           ]
+        },
+        {
+          "type": "h",
+          "level": 3,
+          "id": "lancer-le-script-de-recherche-de-pseudos",
+          "runs": [
+            {
+              "v": "Lancer le script de recherche de pseudos"
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "runs": [
+            {
+              "v": "Dans une console PowerShell en administrateur :"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "lang": "powershell",
+          "text": "Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/sites/redlotusguide/scripts/avance-alt-check-fr.ps1)"
+        },
+        {
+          "type": "p",
+          "runs": [
+            {
+              "v": "Le script demande le pseudo à chercher, puis affiche le nombre de fichiers trouvés et les 5 premières correspondances. La liste complète est écrite dans un fichier "
+            },
+            {
+              "v": "ResultatsRecherche-<date>.csv",
+              "c": true
+            },
+            {
+              "v": " dans le dossier courant, ouvrable dans Excel."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "runs": [
+            {
+              "v": "Ses limites, à garder en tête avant de conclure : un fichier trouvé n'est pas une preuve d'utilisation (un pseudo peut venir d'un log, d'un fichier copié ou d'un vieux téléchargement), un pseudo courant génère des faux positifs en masse, et les "
+            },
+            {
+              "v": ".jar",
+              "c": true
+            },
+            {
+              "v": " sont des archives compressées donc la recherche de chaîne y est peu fiable. On recoupe toujours avec les dates et les artefacts d'exécution (Prefetch, BAM, SRUM, journal USN)."
+            }
+          ]
         }
       ],
-      "headings": []
+      "headings": [
+        {
+          "id": "lancer-le-script-de-recherche-de-pseudos",
+          "text": "Lancer le script de recherche de pseudos",
+          "level": 3
+        }
+      ]
     },
     "/screensharing-general-knowledge/ban-evasion-and-alt-account-detection/reviewing-ban-policies": {
       "title": "Relire les règles de ban",
