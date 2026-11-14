@@ -9,9 +9,12 @@
 # Invoke-RestMethod arrive en octets bruts, et la console Windows les
 # decode en code page 437/850, ce qui casse les caracteres accentues.
 #
-# Usage : clic droit sur le fichier > "Executer avec PowerShell"
-#         ou, dans une console PowerShell :
-#           powershell -ExecutionPolicy Bypass -File .\avance-alt-check-fr.ps1
+# Usage :
+#   - depuis l'invite de commandes (CMD), collez :
+#       powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1')"
+#   - ou clic droit sur le fichier telecharge > "Executer avec PowerShell"
+#   - ou, dans une console PowerShell :
+#       powershell -ExecutionPolicy Bypass -File .\avance-alt-check-fr.ps1
 
 # Extensions analysees et dossier de depart
 $extensions = "*.txt", "*.log", "*.jar", "*.json"

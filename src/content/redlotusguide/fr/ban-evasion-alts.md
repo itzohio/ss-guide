@@ -21,10 +21,10 @@ Relier le joueur en cours de screenshare à un compte déjà banni demande d'exa
 
 ### Lancer le script de recherche de pseudos
 
-Dans une console PowerShell en administrateur :
+Dans une invite de commandes (CMD) en administrateur — ça marche aussi collé dans PowerShell :
 
-```powershell
-Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1)
+```
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1')"
 ```
 
 Le script demande le pseudo à chercher, puis affiche le nombre de fichiers trouvés et les 5 premières correspondances. La liste complète est écrite dans un fichier `ResultatsRecherche-<date>.csv` dans le dossier courant, ouvrable dans Excel.

@@ -147,7 +147,7 @@ Note d'exécution : toutes les commandes incluent `Set-ExecutionPolicy -Scope Pr
 - Commande :
 
 ```powershell
-  Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1)
+  powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1')"
 ```
 
 - À savoir : les messages du script sont écrits sans accents, exprès — récupéré via `Invoke-RestMethod`, le texte arrive en octets bruts et la console Windows le décode en code page 437, ce qui casserait les accents. Et un fichier trouvé n'est pas une preuve à lui seul : un pseudo courant génère des faux positifs, les `.jar` sont compressés donc la recherche y est peu fiable, et il faut recouper avec les dates et les artefacts d'exécution (Prefetch, BAM, SRUM, journal USN).

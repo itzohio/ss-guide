@@ -6,7 +6,7 @@ detect.ac n'a pas d'outil dédié aux comptes alternatifs. La base, c'est le scr
 Commande :
 
 ```powershell
-  Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1)
+  powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1')"
 ```
 
 #### ⚙️ Où chercher à la main

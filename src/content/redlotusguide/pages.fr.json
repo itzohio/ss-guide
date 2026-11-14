@@ -19583,14 +19583,14 @@
           "type": "p",
           "runs": [
             {
-              "v": "Dans une console PowerShell en administrateur :"
+              "v": "Dans une invite de commandes (CMD) en administrateur — ça marche aussi collé dans PowerShell :"
             }
           ]
         },
         {
           "type": "code",
-          "lang": "powershell",
-          "text": "Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1)"
+          "lang": "",
+          "text": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"iex (irm 'https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1')\""
         },
         {
           "type": "p",
@@ -34024,7 +34024,7 @@
         {
           "type": "code",
           "lang": "powershell",
-          "text": "  Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1)"
+          "text": "  powershell -NoProfile -ExecutionPolicy Bypass -Command \"iex (irm 'https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1')\""
         },
         {
           "type": "h",
@@ -36890,7 +36890,7 @@
         {
           "type": "code",
           "lang": "powershell",
-          "text": "  Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1)"
+          "text": "  powershell -NoProfile -ExecutionPolicy Bypass -Command \"iex (irm 'https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1')\""
         },
         {
           "type": "ul",
