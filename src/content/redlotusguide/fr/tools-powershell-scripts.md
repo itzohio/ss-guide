@@ -139,12 +139,15 @@ Note d'exécution : toutes les commandes incluent `Set-ExecutionPolicy -Scope Pr
   powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/praiselily/lilith-ps/refs/heads/main/Services.ps1)
 ```
 
-**Alt Account Finder**
+**Alt Account Finder (version française)**
 
-- Auteur : communauté Red Lotus
-- But : scanne les dossiers de jeu et les logs à la recherche de chaînes (comme "user" ou "username") pour trouver des traces de comptes alternatifs.
+- Auteur : notre version, d'après le script ADVANCE ALT CHECK (version italienne d'origine).
+- But : on lui donne un pseudo à chercher (un alt banni connu), il parcourt récursivement `C:\Users` et sort la liste des fichiers qui contiennent cette chaîne. Utile pour retrouver les traces d'un compte dans les logs de lanceurs, les `accounts.json` comme dans `.lunarclient` ou `.emberclient`, les configs et les fichiers de mods.
+- Détail : il analyse les fichiers `.txt`, `.log`, `.jar` et `.json`, affiche une barre de progression avec le temps restant, puis le nombre de fichiers trouvés, les 5 premières correspondances (chemin, taille, date de modification) et exporte tout dans un `ResultatsRecherche-<date>.csv` ouvrable dans Excel.
 - Commande :
 
 ```powershell
-  powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://pastebin.com/raw/LBGh2Cyb)
+  Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1)
 ```
+
+- À savoir : les messages du script sont écrits sans accents, exprès — récupéré via `Invoke-RestMethod`, le texte arrive en octets bruts et la console Windows le décode en code page 437, ce qui casserait les accents. Et un fichier trouvé n'est pas une preuve à lui seul : un pseudo courant génère des faux positifs, les `.jar` sont compressés donc la recherche y est peu fiable, et il faut recouper avec les dates et les artefacts d'exécution (Prefetch, BAM, SRUM, journal USN).

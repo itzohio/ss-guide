@@ -34024,7 +34024,7 @@
         {
           "type": "code",
           "lang": "powershell",
-          "text": "  powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://pastebin.com/raw/LBGh2Cyb)"
+          "text": "  Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1)"
         },
         {
           "type": "h",
@@ -36782,7 +36782,7 @@
           "type": "p",
           "runs": [
             {
-              "v": "Alt Account Finder",
+              "v": "Alt Account Finder (version française)",
               "b": true
             }
           ]
@@ -36793,7 +36793,7 @@
             {
               "runs": [
                 {
-                  "v": "Auteur : communauté Red Lotus"
+                  "v": "Auteur : notre version, d'après le script ADVANCE ALT CHECK (version italienne d'origine)."
                 }
               ],
               "children": []
@@ -36801,7 +36801,78 @@
             {
               "runs": [
                 {
-                  "v": "But : scanne les dossiers de jeu et les logs à la recherche de chaînes (comme \"user\" ou \"username\") pour trouver des traces de comptes alternatifs."
+                  "v": "But : on lui donne un pseudo à chercher (un alt banni connu), il parcourt récursivement "
+                },
+                {
+                  "v": "C:\\Users",
+                  "c": true
+                },
+                {
+                  "v": " et sort la liste des fichiers qui contiennent cette chaîne. Utile pour retrouver les traces d'un compte dans les logs de lanceurs, les "
+                },
+                {
+                  "v": "accounts.json",
+                  "c": true
+                },
+                {
+                  "v": " comme dans "
+                },
+                {
+                  "v": ".lunarclient",
+                  "c": true
+                },
+                {
+                  "v": " ou "
+                },
+                {
+                  "v": ".emberclient",
+                  "c": true
+                },
+                {
+                  "v": ", les configs et les fichiers de mods."
+                }
+              ],
+              "children": []
+            },
+            {
+              "runs": [
+                {
+                  "v": "Détail : il analyse les fichiers "
+                },
+                {
+                  "v": ".txt",
+                  "c": true
+                },
+                {
+                  "v": ", "
+                },
+                {
+                  "v": ".log",
+                  "c": true
+                },
+                {
+                  "v": ", "
+                },
+                {
+                  "v": ".jar",
+                  "c": true
+                },
+                {
+                  "v": " et "
+                },
+                {
+                  "v": ".json",
+                  "c": true
+                },
+                {
+                  "v": ", affiche une barre de progression avec le temps restant, puis le nombre de fichiers trouvés, les 5 premières correspondances (chemin, taille, date de modification) et exporte tout dans un "
+                },
+                {
+                  "v": "ResultatsRecherche-<date>.csv",
+                  "c": true
+                },
+                {
+                  "v": " ouvrable dans Excel."
                 }
               ],
               "children": []
@@ -36819,7 +36890,34 @@
         {
           "type": "code",
           "lang": "powershell",
-          "text": "  powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://pastebin.com/raw/LBGh2Cyb)"
+          "text": "  Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1)"
+        },
+        {
+          "type": "ul",
+          "items": [
+            {
+              "runs": [
+                {
+                  "v": "À savoir : les messages du script sont écrits sans accents, exprès — récupéré via "
+                },
+                {
+                  "v": "Invoke-RestMethod",
+                  "c": true
+                },
+                {
+                  "v": ", le texte arrive en octets bruts et la console Windows le décode en code page 437, ce qui casserait les accents. Et un fichier trouvé n'est pas une preuve à lui seul : un pseudo courant génère des faux positifs, les "
+                },
+                {
+                  "v": ".jar",
+                  "c": true
+                },
+                {
+                  "v": " sont compressés donc la recherche y est peu fiable, et il faut recouper avec les dates et les artefacts d'exécution (Prefetch, BAM, SRUM, journal USN)."
+                }
+              ],
+              "children": []
+            }
+          ]
         }
       ],
       "headings": [
