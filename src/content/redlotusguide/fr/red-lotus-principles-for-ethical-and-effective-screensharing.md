@@ -1,4 +1,4 @@
-<!-- route: /screensharing-introducttion-and-principles/second-section-red-lotus-principles/red-lotus-principles-for-ethical-and-effective-screensharing -->
+<!-- route: /screensharing-introducttion-and-principles/second-section-screenshare-principles/screenshare-principles-for-ethical-and-effective-screensharing -->
 # Les principes pour un screenshare propre et efficace
 
 Ces principes servent de base à tous les screenshares faits dans ce cadre, ou qui s'en inspirent. L'ordre des priorités est simple : les gens et leurs données passent avant le résultat du check.

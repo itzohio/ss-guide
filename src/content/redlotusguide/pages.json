@@ -420,8 +420,8 @@
       ],
       "order": 3
     },
-    "/screensharing-introducttion-and-principles/second-section-red-lotus-principles": {
-      "route": "/screensharing-introducttion-and-principles/second-section-red-lotus-principles",
+    "/screensharing-introducttion-and-principles/second-section-screenshare-principles": {
+      "route": "/screensharing-introducttion-and-principles/second-section-screenshare-principles",
       "source": "/redlotusguide/screensharing-introducttion-and-principles/second-section-red-lotus-principles",
       "title": "Red Lotus Principles",
       "icon": {
@@ -464,8 +464,8 @@
       ],
       "order": 4
     },
-    "/screensharing-introducttion-and-principles/second-section-red-lotus-principles/red-lotus-principles-for-ethical-and-effective-screensharing": {
-      "route": "/screensharing-introducttion-and-principles/second-section-red-lotus-principles/red-lotus-principles-for-ethical-and-effective-screensharing",
+    "/screensharing-introducttion-and-principles/second-section-screenshare-principles/screenshare-principles-for-ethical-and-effective-screensharing": {
+      "route": "/screensharing-introducttion-and-principles/second-section-screenshare-principles/screenshare-principles-for-ethical-and-effective-screensharing",
       "source": "/redlotusguide/screensharing-introducttion-and-principles/second-section-red-lotus-principles/red-lotus-principles-for-ethical-and-effective-screensharing",
       "title": "Red Lotus Principles for Ethical and Effective ScreenSharing",
       "icon": {
@@ -51754,8 +51754,8 @@
     "/screensharing-introducttion-and-principles/first-section-an-introduction-to-hack-checks-and-bypasses/what-is-a-hack-check",
     "/screensharing-introducttion-and-principles/first-section-an-introduction-to-hack-checks-and-bypasses/the-goal-demonstrating-cheat-usage",
     "/screensharing-introducttion-and-principles/first-section-an-introduction-to-hack-checks-and-bypasses/the-staffers-perspective-and-the-learning-process",
-    "/screensharing-introducttion-and-principles/second-section-red-lotus-principles",
-    "/screensharing-introducttion-and-principles/second-section-red-lotus-principles/red-lotus-principles-for-ethical-and-effective-screensharing",
+    "/screensharing-introducttion-and-principles/second-section-screenshare-principles",
+    "/screensharing-introducttion-and-principles/second-section-screenshare-principles/screenshare-principles-for-ethical-and-effective-screensharing",
     "/screensharing-introducttion-and-principles/second-section-red-lotus-principles/requirements-for-screensharers",
     "/screensharing-introducttion-and-principles/second-section-red-lotus-principles/screensharing-protocols",
     "/screensharing-introducttion-and-principles/second-section-red-lotus-principles/anti-corruption-measures",

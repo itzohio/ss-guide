@@ -1,14 +1,19 @@
 import { navSections, pages, prevNextFor, crumbsFor } from "@/components/sites/redlotusguide/pages-data";
 import { SiteShell } from "@/components/sites/redlotusguide/site-shell";
+import { LegacyRedirect } from "@/components/sites/redlotusguide/legacy-redirect";
+import { legacyRedirects } from "@/components/sites/redlotusguide/legacy-redirects";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return Object.values(pages)
+  const routes = Object.values(pages)
     .filter((page) => page.route !== "/")
-    .map((page) => ({ slug: page.route.slice(1).split("/") }));
+    .map((page) => page.route);
+  return [...routes, ...Object.keys(legacyRedirects)].map((route) => ({
+    slug: route.slice(1).split("/"),
+  }));
 }
 
 export async function generateMetadata({
@@ -17,7 +22,11 @@ export async function generateMetadata({
   params: Promise<{ slug: string[] }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const page = pages[`/${slug.join("/")}`];
+  const route = `/${slug.join("/")}`;
+  if (legacyRedirects[route]) {
+    return { title: "Page déplacée | SS Guide", robots: { index: false, follow: true } };
+  }
+  const page = pages[route];
   if (!page) return {};
   const title = page.fr?.title ?? page.title;
   const description = `${title} — le guide français des screenshares et hack checks.`;
@@ -37,7 +46,11 @@ export async function generateMetadata({
 
 export default async function DocRoute({ params }: { params: Promise<{ slug: string[] }> }) {
   const { slug } = await params;
-  const page = pages[`/${slug.join("/")}`];
+  const route = `/${slug.join("/")}`;
+  const target = legacyRedirects[route];
+  if (target) return <LegacyRedirect to={target} />;
+
+  const page = pages[route];
   if (!page) notFound();
 
   const { prev, next } = prevNextFor(page.route);
