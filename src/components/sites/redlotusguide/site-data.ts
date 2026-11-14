@@ -114,7 +114,6 @@ export const navGroups: NavGroup[] = [
       { title: "RedLotus Tools", path: "/redlotusguide/screenshare-tools/redlotus-tools" },
       { title: "Spok's Tools", path: "/redlotusguide/screenshare-tools/spoks-tools" },
       { title: "Rancio's Tools", path: "/redlotusguide/screenshare-tools/rancios-tools" },
-      { title: "Echo's Tools", path: "/redlotusguide/screenshare-tools/echos-tools" },
       {
         title: "Specific PowerShell Scripts",
         path: "/redlotusguide/screenshare-tools/specific-powershell-scripts",
