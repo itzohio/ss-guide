@@ -1,0 +1,17 @@
+<!-- route: /screensharing-general-knowledge/eighth-section-common-bypass-techniques-in-screensharing/fake-digital-signatures -->
+# Signatures numériques absentes ou fausses
+
+- **Description :** les signatures numériques sont des mécanismes cryptographiques qui vérifient l'authenticité et l'intégrité d'un fichier. Les éditeurs légitimes signent leurs `.exe` et `.dll` avec des certificats de signature de code délivrés par des autorités de certification (CA) de confiance. Ça confirme l'éditeur et garantit que le fichier n'a pas été modifié après signature. Les bypassers essaient d'utiliser ou d'imiter des signatures pour échapper aux contrôles ou faire passer un fichier malveillant pour légitime.
+- **Techniques d'évasion :**
+  - Certificats volés : récupérer illicitement un certificat de signature légitime (via une intrusion en entreprise) et s'en servir pour signer un malware, qui paraît alors de confiance au premier abord.
+  - Certificats faux ou auto-signés : générer une signature avec un certificat maison ou émis par une CA non fiable. L'OS et les outils de vérification ne la reconnaissent pas.
+  - Modification d'un fichier signé : altérer le contenu d'un fichier signé (édition hexa, par exemple) invalide la signature existante, et les outils de vérification le voient.
+  - Usurpation des infos de version : compiler un malware avec les informations de version d'un logiciel légitime pour que ses propriétés paraissent crédibles, même sans signature ou avec une fausse.
+- **Pourquoi les tricheurs font ça :** pour tromper les outils automatiques ou les vérifications manuelles qui mettent en liste blanche les fichiers signés ou signalent surtout les non signés. Une fausse signature peut donner une première impression de légitimité.
+- **Détection :** le point clé, ce n'est pas de voir si une signature existe, mais de vérifier qu'elle est valide et digne de confiance.
+  - Outils de vérification : il faut une vraie validation Authenticode contre les CA racines de confiance du système :
+    - PowerShell : `Get-AuthenticodeSignature C:\path\to\file.exe`. Regarder la propriété `Status`, qui doit être `Valid`. `NotSigned`, `HashMismatch` (fichier modifié après signature), `UnknownError` ou `UntrustedRoot` indiquent un problème.
+    - Le script Signature Checker de BACA : il automatise la vérification de plusieurs fichiers et affiche clairement le statut (Valid, NotSigned, HashMismatch, NotTrusted).
+    - Paths-Parser de Spokwn : il intègre les vérifications de signature (Authenticode et catalogue) aux autres analyses (génériques, remplacement) et donne un rapport complet pour une liste de fichiers. Il signale spécifiquement les cheats signés connus comme Slinky et Vape.
+    - Vérification manuelle : clic droit sur le fichier > Propriétés > onglet Signatures numériques. Sélectionner la signature et cliquer sur "Détails". Le statut doit indiquer que la signature est correcte ; vérifier aussi l'émetteur et la chaîne de certificats.
+  - Se concentrer sur les "NotSigned" et les erreurs : pendant un screenshare, regarder en priorité les fichiers signalés `NotSigned` ou avec une erreur (`HashMismatch`, `UntrustedRoot`, `UnknownError`), surtout les exe ou DLL trouvés à des endroits suspects ou via des artefacts d'exécution. Tous les fichiers non signés ne sont pas malveillants, mais du code non signé chargé par le jeu ou interagissant avec lui est très suspect.

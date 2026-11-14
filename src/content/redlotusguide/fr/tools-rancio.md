@@ -1,0 +1,9 @@
+<!-- route: /screenshare-tools/rancios-tools/tools -->
+# Outils
+
+- **DoomsDay Client Finder (`DDFO.exe`) :** un outil ciblé pour détecter la présence du client de cheat Minecraft "DoomsDay". Testé spécifiquement sur la version 1.16.5.
+- **Unicode Detector (`Unicode.exe`) :** cherche les fichiers qui utilisent des caractères Unicode dans leur nom, en visant surtout les types suspects comme les exécutables et les DLL. Les caractères Unicode servent à déguiser des noms de fichiers ou à contourner les détections par simple correspondance de chaînes.
+- **Ocean SS Tool :** c'est un SS Tool complet, lié à Rancio et présenté comme le successeur gratuit du Golden SS Tool. Un scanner complet pour Minecraft (gratuit) et d'autres jeux (payant), avec tableau de bord web, système de pin pour lancer les scans, intégration VirusTotal/Hybrid Analysis, détection de divers cheats et méthodes de bypass (Planificateur de tâches, VM…), et rapports détaillés (logs, temps de traitement…). Il est réputé particulièrement bon pour détecter les bypass.
+- **GlobalLister :** un utilitaire qui interroge le DeviceID du système, probablement contre une base en ligne, pour retrouver le nom de produit et les specs d'origine des composants. Ça peut aider à repérer du matériel falsifié ou inhabituel.
+- **Maceta (`maceta.exe`) :** utilise l'API VirusTotal pour vérifier si des exécutables non signés sont malveillants. Il faut une clé API VirusTotal, et il s'utilise souvent avec un dump de chaînes de processus (depuis `csrss.exe`, par exemple) pour identifier et vérifier les exécutables non signés suspects trouvés en mémoire.
+- **En résumé :** chaque outil de Rancio apporte une capacité ciblée. DDFO vise un cheat précis, Unicode Detector trouve les noms de fichiers suspects, Ocean couvre largement cheats et bypass, GlobalLister vérifie l'identité matérielle, et Maceta s'appuie sur du renseignement externe (VirusTotal) pour vérifier les exécutables non signés.

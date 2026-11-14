@@ -1,0 +1,4 @@
+<!-- route: /screensharing-minecraft-knowledge/sixth-section-mouse-macro-and-input-analysis-in-screensharing -->
+# Analyse de la souris, des macros et des entrées
+
+Analyser la config souris d'un joueur, l'usage éventuel de macros et certains réglages d'entrée, c'est un morceau important de pas mal de screenshares, surtout dans les jeux où la vitesse ou la précision des entrées donne un avantage. C'est particulièrement vrai en PvP Minecraft, où un CPS élevé (clics par seconde) est vu comme un plus, ce qui pousse les joueurs à chercher des méthodes au-delà du clic normal : certaines légitimes, d'autres interdites. Les tricheurs utilisent aussi bien des logiciels tiers (souvent bannis) que les fonctions du logiciel ou du matériel de leur souris pour automatiser des actions ou exploiter des caractéristiques du matériel. Cette section détaille les points qu'on examine en screenshare côté entrées souris.

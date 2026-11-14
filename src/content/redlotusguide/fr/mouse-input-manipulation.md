@@ -1,0 +1,9 @@
+<!-- route: /screensharing-minecraft-knowledge/sixth-section-mouse-macro-and-input-analysis-in-screensharing/1-understanding-mouse-input-manipulation -->
+# Comprendre la manipulation des entrées souris
+
+Minecraft fait partie des rares jeux où la vitesse de clic brute change directement le résultat (bridging, hit registration en PvP). Cette obsession du CPS pousse les joueurs à chercher comment cliquer plus vite. Certaines techniques sont du skill légitime (jitter click, butterfly click classique sur du matériel normal), d'autres exploitent des fonctions du matériel ou des logiciels externes d'une façon que beaucoup de communautés jugent déloyale. Du coup, analyser les réglages souris et les méthodes d'entrée devient souvent un point d'enquête quand on suspecte un autoclicker, un CPS anormal ou un autre cheat d'entrée. Les points à regarder :
+
+- **Macros logicielles :** des séquences d'entrées automatisées stockées dans des fichiers de config sur le PC, en général gérées par le logiciel du fabricant de la souris.
+- **Macros embarquées (on-board) :** des séquences stockées directement dans la mémoire interne de la souris, qui fonctionnent même sans le logiciel du fabricant.
+- **Le debounce time :** un réglage matériel/firmware qui définit la vitesse à laquelle la souris enregistre des clics successifs. Le modifier (sur les souris qui le permettent) est souvent associé à des techniques d'abus de souris (drag click, butterfly click particuliers) pour atteindre un CPS artificiellement haut.
+- **Les logiciels d'entrée tiers :** des outils génériques comme X-Mouse Button Control (XMBC) permettent de remapper et de scripter les entrées souris. À cause du potentiel d'abus, ils sont souvent bannis par les serveurs compétitifs. (À noter : les utilitaires comme Timer Resolution, qui ajustent la précision du timer système, ne sont en général pas classés avec les logiciels de macro ou de remap comme XMBC.)

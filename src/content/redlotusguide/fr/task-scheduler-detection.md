@@ -1,0 +1,10 @@
+<!-- route: /screensharing-general-knowledge/eighth-section-common-bypass-techniques-in-screensharing/task-scheduler-bypass-techniques/detection -->
+# Détection
+
+- **Inspection manuelle (interface du Planificateur) :** ouvrir `taskschd.msc` et passer en revue les tâches de la bibliothèque principale et sous `Microsoft\Windows`. Chercher les tâches récemment créées ou modifiées, aux noms ou descriptions suspects, celles qui se déclenchent à l'ouverture de session ou au démarrage, et celles qui lancent des programmes ou scripts inhabituels (surtout depuis Temp ou Téléchargements). Regarder les onglets "Actions" et "Déclencheurs".
+- **Requête en ligne de commande (`schtasks.exe`) :** `schtasks /query /fo LIST /v` donne la liste détaillée de toutes les tâches.
+- **Fichiers de tâches (`C:\Windows\System32\Tasks`) :** les tâches sont stockées en XML dans ce dossier et ses sous-dossiers. Trier par date de modification dans Everything. Lire le XML (Notepad ou un visualiseur) pour voir les commandes, arguments, déclencheurs et le contexte utilisateur. Chercher les XML modifiés récemment.
+- **Scripts PowerShell :** des scripts dédiés (ceux de N0LW ou Rio, par exemple) parsent les XML de tâches, extraient commandes et arguments, et signalent les entrées suspectes selon des mots-clés (`cmd`, `powershell`, `rundll32`…).
+- **Journaux d'événements :** le journal TaskScheduler Operational (`Journaux des applications et des services > Microsoft > Windows > TaskScheduler > Operational`) enregistre la création (ID 106), la suppression (ID 141), l'exécution (ID 200/201) et la fin des tâches. Croiser les dates avec les tâches suspectes trouvées ailleurs.
+- **Registry Explorer :** examiner les clés du cache des tâches (`HKLM\Software\Microsoft\Windows NT\CurrentVersion\Schedule\Taskcache\Tasks` et `Tree`) pour les métadonnées, y compris des tâches supprimées ou aux noms Unicode.
+- **System Informer :** dumper la mémoire du service du planificateur (`svchost.exe` ou `taskeng.exe`) et chercher les balises `<Command>` ou `<Arguments>`, ou des chemins/scripts trouvés par ailleurs.

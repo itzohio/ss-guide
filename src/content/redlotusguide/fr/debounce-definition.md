@@ -1,0 +1,7 @@
+<!-- route: /screensharing-minecraft-knowledge/sixth-section-mouse-macro-and-input-analysis-in-screensharing/3-debounce-time-analysis/definition-and-mouse-abuse -->
+# Définition et abus de souris
+
+Le debounce time est un mécanisme présent dans les interrupteurs physiques d'une souris et dans son firmware/logiciel. Son but : empêcher qu'un seul appui physique soit enregistré comme plusieurs clics (le fameux "double-clicking"). C'est nécessaire parce que les composants mécaniques d'un interrupteur "rebondissent" physiquement au contact, ce qui crée des signaux électriques parasites. Le debounce introduit un très court délai (une "période aveugle") après un clic enregistré, pendant lequel la souris ignore les signaux suivants de cet interrupteur.
+
+- **Debounce classique :** sur la plupart des souris bureautiques ou gaming, la valeur par défaut tourne autour de 8 ms, 10 ms, parfois plus (16 ms). Ça suffit en général à filtrer les rebonds involontaires.
+- **Abus de souris :** c'est le fait de combiner une souris au debounce réglable ou très bas (souvent configurable sous 10 ms, parfois 0 à 4 ms) avec des techniques de clic physiques particulières (surtout le drag click et certaines formes de butterfly click). Ces techniques font vibrer rapidement l'interrupteur. Un debounce normal filtre ces vibrations, mais un debounce très bas laisse le firmware les interpréter comme plusieurs clics distincts. Résultat : un CPS artificiellement gonflé (souvent 20+ CPS, parfois bien plus) impossible à atteindre avec un clic normal sur une souris au debounce standard.
