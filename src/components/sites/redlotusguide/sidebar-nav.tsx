@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { assetPath } from "@/lib/base-path";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type RefObject } from "react";
 
@@ -131,7 +132,7 @@ export function SidebarNav({
     <aside className="rl-sidebar" data-open={open} aria-label={t.spaceNav}>
       <Link className="rl-sidebar-logo" href="/" aria-label="Accueil">
         <Image
-          src="/sites/redlotusguide/logo.png"
+          src={assetPath("/sites/redlotusguide/logo.png")}
           alt="France Ranked"
           width={178}
           height={256}

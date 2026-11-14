@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/base-path";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -20,7 +21,7 @@ function RunView({ run }: { run: Run }) {
     const image = (
       <Image
         className="rl-doc-img"
-        src={run.img}
+        src={assetPath(run.img)}
         alt={run.alt ?? ""}
         width={640}
         height={360}
@@ -130,7 +131,7 @@ function BlockView({ block }: { block: JsonBlock }) {
       return (
         <Image
           className="rl-doc-img"
-          src={block.src}
+          src={assetPath(block.src)}
           alt={block.alt}
           width={640}
           height={360}
