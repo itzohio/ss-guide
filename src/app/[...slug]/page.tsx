@@ -19,9 +19,19 @@ export async function generateMetadata({
   const { slug } = await params;
   const page = pages[`/${slug.join("/")}`];
   if (!page) return {};
+  const title = page.fr?.title ?? page.title;
+  const description = `${title} — le guide français des screenshares et hack checks.`;
   return {
-    title: `${page.fr?.title ?? page.title} | SS Guide`,
-    description: `${page.title} — RedLotus SS Guide Remastered.`,
+    title: `${title} | SS Guide`,
+    description,
+    openGraph: {
+      title: `${title} | SS Guide`,
+      description,
+      siteName: "SS Guide",
+      locale: "fr_FR",
+      type: "article",
+    },
+    twitter: { card: "summary", title: `${title} | SS Guide`, description },
   };
 }
 

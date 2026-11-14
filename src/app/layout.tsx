@@ -8,10 +8,24 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const siteDescription =
+  "Le guide français des screenshares et hack checks : artefacts Windows, spécificités Minecraft, bypass et méthodes d'analyse.";
+
 export const metadata: Metadata = {
   title: "Introduction | SS Guide",
-  description:
-    "RedLotus SS Guide Remastered — a remastered, in-depth exploration of hack checks and screenshares.",
+  description: siteDescription,
+  openGraph: {
+    title: "Introduction | SS Guide",
+    description: siteDescription,
+    siteName: "SS Guide",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Introduction | SS Guide",
+    description: siteDescription,
+  },
   icons: {
     icon: assetPath("/sites/redlotusguide/logo.png"),
     apple: assetPath("/sites/redlotusguide/logo.png"),
