@@ -8,12 +8,12 @@ export type Card = {
 export const socials: Card[] = [
   {
     "href": "https://discord.gg/Z8MqyYwE",
-    "image": "/sites/redlotusguide/cards/00-2y94rgbqas691_upscayl_4x_realesrgan-x4pl.png",
+    "image": "/assets/cards/00-2y94rgbqas691_upscayl_4x_realesrgan-x4pl.png",
     "label": "RedLotus Discord"
   },
   {
     "href": "https://www.youtube.com/@itzicehere",
-    "image": "/sites/redlotusguide/cards/01-create-a-youtube-banner-or-any-logo.png",
+    "image": "/assets/cards/01-create-a-youtube-banner-or-any-logo.png",
     "label": "Ice's YouTube"
   }
 ];
@@ -21,132 +21,132 @@ export const socials: Card[] = [
 export const partners: Card[] = [
   {
     "href": "https://discord.com/invite/echoac",
-    "image": "/sites/redlotusguide/cards/02-10b2eab0f937bb48ec0986c468b72746.jpg"
+    "image": "/assets/cards/02-10b2eab0f937bb48ec0986c468b72746.jpg"
   },
   {
     "href": "https://discord.com/invite/scanner",
-    "image": "/sites/redlotusguide/cards/03-8815c56d9fa5376f6af9021f85ec2ffe.jpg"
+    "image": "/assets/cards/03-8815c56d9fa5376f6af9021f85ec2ffe.jpg"
   },
   {
     "href": "https://discord.com/invite/scanning",
-    "image": "/sites/redlotusguide/cards/04-bb8031855e11ff0d215fa4635c6378e8.jpg"
+    "image": "/assets/cards/04-bb8031855e11ff0d215fa4635c6378e8.jpg"
   },
   {
     "href": "https://discord.com/invite/rankedbedwars",
-    "image": "/sites/redlotusguide/cards/05-f0a7b9c0b2bd6976b8a0eb4e4c482a26.jpg"
+    "image": "/assets/cards/05-f0a7b9c0b2bd6976b8a0eb4e4c482a26.jpg"
   },
   {
     "href": "https://discord.com/invite/tiertests",
-    "image": "/sites/redlotusguide/cards/06-accc008178f5efa7454f013bc9df9775.jpg"
+    "image": "/assets/cards/06-accc008178f5efa7454f013bc9df9775.jpg"
   },
   {
     "href": "https://discord.com/invite/arbw",
-    "image": "/sites/redlotusguide/cards/07-bff5244dd0a2caf14c71e949ed2008f2.jpg"
+    "image": "/assets/cards/07-bff5244dd0a2caf14c71e949ed2008f2.jpg"
   },
   {
     "href": "https://discord.com/invite/YC3u2sPu6M",
-    "image": "/sites/redlotusguide/cards/08-76c1eb4829cb8af359519360cfd11ea7.jpg"
+    "image": "/assets/cards/08-76c1eb4829cb8af359519360cfd11ea7.jpg"
   },
   {
     "href": "https://discord.com/invite/tourney",
-    "image": "/sites/redlotusguide/cards/09-39e45241a165d13c828c76c34fb235b7.jpg"
+    "image": "/assets/cards/09-39e45241a165d13c828c76c34fb235b7.jpg"
   },
   {
     "href": "https://discord.gg/HYFVkwuKET",
-    "image": "/sites/redlotusguide/cards/10-94207176bc0b590a174eb08c2c34db01.jpg"
+    "image": "/assets/cards/10-94207176bc0b590a174eb08c2c34db01.jpg"
   },
   {
     "href": "https://discord.com/invite/aranked",
-    "image": "/sites/redlotusguide/cards/11-2012661b78ed23309ee2c485ff8d0c50.jpg"
+    "image": "/assets/cards/11-2012661b78ed23309ee2c485ff8d0c50.jpg"
   },
   {
     "href": "https://discord.com/invite/mighettorz",
-    "image": "/sites/redlotusguide/cards/12-4525530e317f50bb0a30b7997736bace.jpg"
+    "image": "/assets/cards/12-4525530e317f50bb0a30b7997736bace.jpg"
   },
   {
     "href": "https://discord.com/invite/fullsend",
-    "image": "/sites/redlotusguide/cards/13-6596b77964b4d680a7e7d0e3e58e007e.jpg"
+    "image": "/assets/cards/13-6596b77964b4d680a7e7d0e3e58e007e.jpg"
   },
   {
     "href": "https://discord.com/invite/bridgescrims",
-    "image": "/sites/redlotusguide/cards/14-ddeaeac01d04f61937837199a06d001e.jpg"
+    "image": "/assets/cards/14-ddeaeac01d04f61937837199a06d001e.jpg"
   },
   {
     "href": "https://discord.gg/APwb3vdRqm",
-    "image": "/sites/redlotusguide/cards/15-3e05a4963a5b8e81a919bdcb1c16ab56.jpg",
+    "image": "/assets/cards/15-3e05a4963a5b8e81a919bdcb1c16ab56.jpg",
     "label": "Mineberry RBW"
   },
   {
     "href": "https://discord.gg/fadedmc",
-    "image": "/sites/redlotusguide/cards/16-a_db49dbb699fa361ac7cacda6200e6d84.gif"
+    "image": "/assets/cards/16-a_db49dbb699fa361ac7cacda6200e6d84.gif"
   },
   {
     "href": "https://discord.gg/zrbw",
-    "image": "/sites/redlotusguide/cards/17-0b627bf12fcd218206a16be8eb81712c.jpg"
+    "image": "/assets/cards/17-0b627bf12fcd218206a16be8eb81712c.jpg"
   },
   {
     "href": "https://discord.com/invite/housing",
-    "image": "/sites/redlotusguide/cards/18-6ff767aa46980304338249c49dd49855.jpg"
+    "image": "/assets/cards/18-6ff767aa46980304338249c49dd49855.jpg"
   },
   {
     "href": "https://discord.gg/HfFkdRgrts",
-    "image": "/sites/redlotusguide/cards/19-805f1017acb6a5ab6fadc79152f65910.jpg"
+    "image": "/assets/cards/19-805f1017acb6a5ab6fadc79152f65910.jpg"
   },
   {
     "href": "https://discord.com/invite/ht3",
-    "image": "/sites/redlotusguide/cards/20-standard.gif"
+    "image": "/assets/cards/20-standard.gif"
   },
   {
     "href": "https://discord.com/invite/miniwalls",
-    "image": "/sites/redlotusguide/cards/21-6006557a11432922ac91336de9b1b7fc.jpg"
+    "image": "/assets/cards/21-6006557a11432922ac91336de9b1b7fc.jpg"
   },
   {
     "href": "https://discord.gg/tiers",
-    "image": "/sites/redlotusguide/cards/22-fea5a67f2b7780ee52d143d6e03f0496.jpg"
+    "image": "/assets/cards/22-fea5a67f2b7780ee52d143d6e03f0496.jpg"
   },
   {
     "href": "https://discord.gg/diapot",
-    "image": "/sites/redlotusguide/cards/23-f343e8aa1378124e1266ac04ff34ce53.jpg"
+    "image": "/assets/cards/23-f343e8aa1378124e1266ac04ff34ce53.jpg"
   },
   {
     "href": "https://discord.gg/uhctiers",
-    "image": "/sites/redlotusguide/cards/24-66be189dfe6630aa3e0ef5432d6ff82b.jpg"
+    "image": "/assets/cards/24-66be189dfe6630aa3e0ef5432d6ff82b.jpg"
   },
   {
     "href": "https://discord.gg/neth",
-    "image": "/sites/redlotusguide/cards/25-364c5d63b4d6399df340bae5c96f1554.jpg"
+    "image": "/assets/cards/25-364c5d63b4d6399df340bae5c96f1554.jpg"
   },
   {
     "href": "https://discord.gg/axe",
-    "image": "/sites/redlotusguide/cards/26-a9cee64ee4a20c3af9791a443a33be23.jpg"
+    "image": "/assets/cards/26-a9cee64ee4a20c3af9791a443a33be23.jpg"
   },
   {
     "href": "https://discord.gg/smppvp",
-    "image": "/sites/redlotusguide/cards/27-a06a2fb87442c04c53197399614637a3.jpg"
+    "image": "/assets/cards/27-a06a2fb87442c04c53197399614637a3.jpg"
   },
   {
     "href": "https://discord.gg/rQrPJYt8vN",
-    "image": "/sites/redlotusguide/cards/28-5e14b12c951e3c7ab42d8de8a79c817c.jpg"
+    "image": "/assets/cards/28-5e14b12c951e3c7ab42d8de8a79c817c.jpg"
   },
   {
     "href": "https://discord.gg/crystaltl",
-    "image": "/sites/redlotusguide/cards/29-2472b889354c50b16ea006d647ace1d5.jpg"
+    "image": "/assets/cards/29-2472b889354c50b16ea006d647ace1d5.jpg"
   },
   {
     "href": "https://discord.com/invite/eu3JEKfX",
-    "image": "/sites/redlotusguide/cards/30-7b245272a493192f966f47f1dfb9bb86.webp"
+    "image": "/assets/cards/30-7b245272a493192f966f47f1dfb9bb86.webp"
   },
   {
     "href": "https://discord.gg/pvpguide",
-    "image": "/sites/redlotusguide/cards/31-ff6d61376ce64ea9fd3ab92c4e10df0a.jpg"
+    "image": "/assets/cards/31-ff6d61376ce64ea9fd3ab92c4e10df0a.jpg"
   },
   {
     "href": "https://discord.gg/traininghub",
-    "image": "/sites/redlotusguide/cards/32-88d1512db7b7cfbf47b2611e7e5aae6d.jpg"
+    "image": "/assets/cards/32-88d1512db7b7cfbf47b2611e7e5aae6d.jpg"
   },
   {
     "href": "https://discord.gg/pvptiers",
-    "image": "/sites/redlotusguide/cards/33-a7b996fb80e16c9709ef552507fadff6.webp"
+    "image": "/assets/cards/33-a7b996fb80e16c9709ef552507fadff6.webp"
   }
 ];
 

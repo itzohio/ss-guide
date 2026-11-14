@@ -1,27 +1,28 @@
-﻿# AVANCE ALT CHECK - version française
-# D'après le script ADVANCE ALT CHECK (version italienne d'origine).
+# AVANCE ALT CHECK - version francaise
+# D'apres le script ADVANCE ALT CHECK (version italienne d'origine).
 #
-# Recherche un pseudo (ou n'importe quelle chaîne) dans les fichiers
-# .txt, .log, .jar et .json de C:\Users, puis écrit la liste des fichiers
-# trouvés dans un CSV horodaté.
+# Recherche un pseudo (ou n'importe quelle chaine) dans les fichiers
+# .txt, .log, .jar et .json de C:\Users, puis ecrit la liste des fichiers
+# trouves dans un CSV horodate.
 #
-# Usage : clic droit sur le fichier > "Exécuter avec PowerShell"
+# Les messages sont volontairement sans accents : un script lance via
+# Invoke-RestMethod arrive en octets bruts, et la console Windows les
+# decode en code page 437/850, ce qui casse les caracteres accentues.
+#
+# Usage : clic droit sur le fichier > "Executer avec PowerShell"
 #         ou, dans une console PowerShell :
 #           powershell -ExecutionPolicy Bypass -File .\avance-alt-check-fr.ps1
 
-# Extensions analysées et dossier de départ
+# Extensions analysees et dossier de depart
 $extensions = "*.txt", "*.log", "*.jar", "*.json"
 $path = "C:\Users"
 
-# Évite que les fichiers verrouillés ou interdits n'interrompent le scan
+# Evite que les fichiers verrouilles ou interdits n'interrompent le scan
 $ErrorActionPreference = 'SilentlyContinue'
-
-# Accents corrects dans la console Windows
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 $results = @()
 
-# Met en forme une durée : 1h 02m 03s, 02m 03s ou 03s
+# Met en forme une duree : 1h 02m 03s, 02m 03s ou 03s
 function Format-Duree {
     param (
         [Parameter(Mandatory = $true)]
@@ -40,20 +41,20 @@ function Format-Duree {
 
 Clear-Host
 Write-Host "===============================================" -ForegroundColor Cyan
-Write-Host "        AVANCE ALT CHECK - FRANÇAIS           " -ForegroundColor Cyan
+Write-Host "        AVANCE ALT CHECK - FRANCAIS           " -ForegroundColor Cyan
 Write-Host "===============================================" -ForegroundColor Cyan
 Write-Host ""
 
-Write-Host "Ce script va chercher une chaîne dans tous les fichiers" -ForegroundColor Yellow
+Write-Host "Ce script va chercher une chaine dans tous les fichiers" -ForegroundColor Yellow
 Write-Host "avec les extensions suivantes : $($extensions -join ', ')" -ForegroundColor Yellow
 Write-Host "dans le dossier : $path" -ForegroundColor Yellow
 Write-Host ""
 
-$searchString = Read-Host "Pseudo ou chaîne à rechercher"
+$searchString = Read-Host "Pseudo ou chaine a rechercher"
 Write-Host ""
 
 if ([string]::IsNullOrWhiteSpace($searchString)) {
-    Write-Host "Aucune chaîne saisie, arrêt." -ForegroundColor Red
+    Write-Host "Aucune chaine saisie, arret." -ForegroundColor Red
     exit
 }
 
@@ -61,16 +62,16 @@ Write-Host "Lancement de la recherche..." -ForegroundColor Green
 Write-Host ""
 Write-Host "Analyse des fichiers en cours..." -ForegroundColor Gray
 
-# Une seule énumération de tous les fichiers concernés
+# Une seule enumeration de tous les fichiers concernes
 $allFiles = Get-ChildItem -Path $path -Include $extensions -Recurse -File
 $total = $allFiles.Count
 
 if ($total -eq 0) {
-    Write-Host "Aucun fichier trouvé avec ces extensions." -ForegroundColor Red
+    Write-Host "Aucun fichier trouve avec ces extensions." -ForegroundColor Red
     exit
 }
 
-Write-Host "$total fichiers à analyser." -ForegroundColor Gray
+Write-Host "$total fichiers a analyser." -ForegroundColor Gray
 Start-Sleep -Seconds 1
 
 $i = 0
@@ -101,15 +102,15 @@ foreach ($file in $allFiles) {
         $content = Get-Content $file.FullName -Raw
         if ($content -and $content.Contains($searchString)) {
             $results += [PSCustomObject]@{
-                Fichier             = $file.FullName
-                ChaineRecherchee    = $searchString
-                Taille              = "{0:N2} Ko" -f ($file.Length / 1KB)
+                Fichier              = $file.FullName
+                ChaineRecherchee     = $searchString
+                Taille               = "{0:N2} Ko" -f ($file.Length / 1KB)
                 DerniereModification = $file.LastWriteTime
             }
         }
     }
     catch {
-        # Fichier illisible ou verrouillé : on passe au suivant sans bruit
+        # Fichier illisible ou verrouille : on passe au suivant sans bruit
     }
 }
 
@@ -126,27 +127,27 @@ $totalTime = $stopwatch.Elapsed
 $formattedTotalTime = Format-Duree -Duree $totalTime
 
 if ($results.Count -gt 0) {
-    Write-Host "Trouvé $($results.Count) fichier(s) contenant '$searchString'" -ForegroundColor Green
+    Write-Host "Trouve $($results.Count) fichier(s) contenant '$searchString'" -ForegroundColor Green
     Write-Host "Temps total d'analyse : $formattedTotalTime" -ForegroundColor Yellow
-    Write-Host "Fichiers traités par seconde : $([math]::Round($total / $totalTime.TotalSeconds, 2))" -ForegroundColor Yellow
+    Write-Host "Fichiers traites par seconde : $([math]::Round($total / $totalTime.TotalSeconds, 2))" -ForegroundColor Yellow
     Write-Host ""
 
     $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
     $outputPath = "ResultatsRecherche-$timestamp.csv"
     $results | Export-Csv -Path $outputPath -NoTypeInformation -Encoding UTF8
-    Write-Host "Résultats enregistrés dans : $outputPath" -ForegroundColor Green
+    Write-Host "Resultats enregistres dans : $outputPath" -ForegroundColor Green
 
-    Write-Host "Les $([Math]::Min(5, $results.Count)) premières correspondances :" -ForegroundColor White
+    Write-Host "Les $([Math]::Min(5, $results.Count)) premieres correspondances :" -ForegroundColor White
     $results | Select-Object -First 5 | Format-Table -AutoSize -Property Fichier, Taille, DerniereModification
 }
 else {
-    Write-Host "Aucune correspondance trouvée pour '$searchString'" -ForegroundColor Yellow
+    Write-Host "Aucune correspondance trouvee pour '$searchString'" -ForegroundColor Yellow
     Write-Host "Temps total d'analyse : $formattedTotalTime" -ForegroundColor Yellow
 }
 
 Write-Host ""
 Write-Host "===============================================" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "Rappel : un fichier trouvé n'est pas une preuve à lui seul." -ForegroundColor DarkGray
-Write-Host "Vérifie la date, le contexte autour de la chaîne, et croise avec" -ForegroundColor DarkGray
-Write-Host "les artefacts d'exécution (Prefetch, BAM, SRUM, journal USN)." -ForegroundColor DarkGray
+Write-Host "Rappel : un fichier trouve n'est pas une preuve a lui seul." -ForegroundColor DarkGray
+Write-Host "Verifie la date, le contexte autour de la chaine, et croise avec" -ForegroundColor DarkGray
+Write-Host "les artefacts d'execution (Prefetch, BAM, SRUM, journal USN)." -ForegroundColor DarkGray

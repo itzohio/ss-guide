@@ -142,7 +142,7 @@ const main = async () => {
     const file = imageName(row.cover, index);
     const source = proxies.get(fileKey(row.cover))?.src ?? row.cover;
     const bytes = await download(source, join(IMAGE_DIR, "cards", file));
-    cards.push({ ...row, image: `/sites/redlotusguide/cards/${file}`, bytes });
+    cards.push({ ...row, image: `/assets/cards/${file}`, bytes });
   }
 
   const icons = navIcons(html);

@@ -2,7 +2,7 @@ export const sourceOrigin = "https://itzicehere.gitbook.io";
 
 export const currentPath = "/redlotusguide";
 
-export const coverImage = "/sites/redlotusguide/cover.png";
+export const coverImage = "/assets/cover.png";
 
 export const site = {
   title: "SS Guide",

@@ -46162,7 +46162,7 @@
           "runs": [
             {
               "v": "",
-              "img": "/sites/redlotusguide/pages/redlotus-tool-downloader-1.jpg",
+              "img": "/assets/pages/redlotus-tool-downloader-1.jpg",
               "alt": "Watch the video",
               "href": "https://youtu.be/RZC7H5V1plo"
             }
@@ -46627,7 +46627,7 @@
           "runs": [
             {
               "v": "",
-              "img": "/sites/redlotusguide/pages/redlotus-task-sentinel-1.jpg",
+              "img": "/assets/pages/redlotus-task-sentinel-1.jpg",
               "alt": "Task Sentinel Showcase",
               "href": "https://youtu.be/tdGmnBJY-g4"
             }
@@ -47238,7 +47238,7 @@
           "runs": [
             {
               "v": "",
-              "img": "/sites/redlotusguide/pages/redlotus-mod-analyzer-1.jpg",
+              "img": "/assets/pages/redlotus-mod-analyzer-1.jpg",
               "alt": "Mod Analyzer Showcase",
               "href": "https://youtu.be/WzYlw8FagrA"
             }

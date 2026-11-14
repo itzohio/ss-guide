@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     description: siteDescription,
   },
   icons: {
-    icon: assetPath("/sites/redlotusguide/logo.png"),
-    apple: assetPath("/sites/redlotusguide/logo.png"),
+    icon: assetPath("/assets/logo.png"),
+    apple: assetPath("/assets/logo.png"),
   },
 };
 

@@ -19425,11 +19425,18 @@
                           "v": ", puis écrit la liste des fichiers trouvés dans un CSV horodaté en affichant les 5 premières correspondances avec leur taille et leur date de modification. Le script est téléchargeable ici : "
                         },
                         {
-                          "v": "https://itzohio.github.io/ss-guide/sites/redlotusguide/scripts/avance-alt-check-fr.ps1",
+                          "v": "https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1",
                           "c": true
                         },
                         {
-                          "v": ". Ça va beaucoup plus vite qu'une navigation manuelle."
+                          "v": ". Ses messages sont écrits sans accents, exprès : un script récupéré via "
+                        },
+                        {
+                          "v": "Invoke-RestMethod",
+                          "c": true
+                        },
+                        {
+                          "v": " arrive en octets bruts et la console Windows les décode en code page 437, ce qui casse les caractères accentués. Ça va beaucoup plus vite qu'une navigation manuelle."
                         }
                       ],
                       "children": []
@@ -19583,7 +19590,7 @@
         {
           "type": "code",
           "lang": "powershell",
-          "text": "Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/sites/redlotusguide/scripts/avance-alt-check-fr.ps1)"
+          "text": "Invoke-Expression (Invoke-RestMethod https://itzohio.github.io/ss-guide/assets/scripts/avance-alt-check-fr.ps1)"
         },
         {
           "type": "p",

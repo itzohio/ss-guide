@@ -12,7 +12,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const origin = "https://itzicehere.gitbook.io";
 const site = "/redlotusguide";
 const outFile = path.join(root, "src/content/redlotusguide/pages.json");
-const imageDir = path.join(root, "public/sites/redlotusguide/pages");
+const imageDir = path.join(root, "public/assets/pages");
 
 const ENTITIES = {
   "&#x20;": " ",
@@ -419,7 +419,7 @@ const downloadImage = async (url, name) => {
   const buffer = Buffer.from(await response.arrayBuffer());
   await fs.mkdir(imageDir, { recursive: true });
   await fs.writeFile(path.join(imageDir, name), buffer);
-  return `/sites/redlotusguide/pages/${name}`;
+  return `/assets/pages/${name}`;
 };
 
 const main = async () => {

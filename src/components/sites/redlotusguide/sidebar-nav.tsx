@@ -132,7 +132,7 @@ export function SidebarNav({
     <aside className="rl-sidebar" data-open={open} aria-label={t.spaceNav}>
       <Link className="rl-sidebar-logo" href="/" aria-label="Accueil">
         <Image
-          src={assetPath("/sites/redlotusguide/logo.png")}
+          src={assetPath("/assets/logo.png")}
           alt="France Ranked"
           width={178}
           height={256}
