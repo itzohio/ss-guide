@@ -61,7 +61,7 @@ export function SiteShell({
         ? doc.page.fr?.title ?? doc.page.title
         : doc.page.title
       : "Introduction";
-    document.title = `${name} | RedLotus Guide`;
+    document.title = `${name} | SS Guide`;
     document.documentElement.lang = lang;
   }, [doc, lang]);
 

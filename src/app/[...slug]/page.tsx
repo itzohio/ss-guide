@@ -20,7 +20,7 @@ export async function generateMetadata({
   const page = pages[`/${slug.join("/")}`];
   if (!page) return {};
   return {
-    title: `${page.title} | RedLotus Guide`,
+    title: `${page.fr?.title ?? page.title} | SS Guide`,
     description: `${page.title} — RedLotus SS Guide Remastered.`,
   };
 }

@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Introduction | RedLotus Guide",
+  title: "Introduction | SS Guide",
   description:
     "RedLotus SS Guide Remastered — a remastered, in-depth exploration of hack checks and screenshares.",
   icons: {

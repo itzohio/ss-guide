@@ -5,7 +5,7 @@ export const currentPath = "/redlotusguide";
 export const coverImage = "/sites/redlotusguide/cover.png";
 
 export const site = {
-  title: "RedLotus Guide",
+  title: "SS Guide",
   emoji: "🪷",
   pageTitle: "Introduction",
   breadcrumb: {
