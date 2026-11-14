@@ -1,7 +1,7 @@
 <!-- route: /screensharing-introducttion-and-principles/second-section-red-lotus-principles/requirements-for-screensharers -->
 # Ce qu'il faut pour être SSer
 
-Pour garantir un minimum de maturité, de compétence et de compréhension, Red Lotus fixe quelques prérequis pour ceux qui veulent faire des screenshares :
+Pour garantir un minimum de maturité, de compétence et de compréhension, quelques prérequis sont fixés pour ceux qui veulent faire des screenshares :
 
 - **Âge minimum :** 16 ans minimum. L'idée, c'est d'avoir un minimum de maturité et de responsabilité quand on touche au PC et aux données privées de quelqu'un.
 - **Expérience minimum :** au moins 4 mois d'expérience active et dédiée uniquement au screenshare. Ça permet de connaître les outils, les procédures, les artefacts de Windows, les configs habituelles des joueurs et la façon d'interpréter ce qu'on trouve. C'est de l'expérience en check, pas juste avoir fait partie d'un staff ou regardé.

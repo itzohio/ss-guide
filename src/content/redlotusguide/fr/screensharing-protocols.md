@@ -1,7 +1,7 @@
 <!-- route: /screensharing-introducttion-and-principles/second-section-red-lotus-principles/screensharing-protocols -->
 # Les protocoles du screenshare (enregistrement vidéo)
 
-Red Lotus impose des règles strictes sur la documentation des screenshares, principalement via l'enregistrement vidéo :
+Des règles strictes encadrent la documentation des screenshares, principalement via l'enregistrement vidéo :
 
 - **Enregistrement obligatoire :** chaque SSer doit filmer l'intégralité de son screenshare, du début de l'interaction jusqu'à la fin. Tout le monde, sans exception, même avec un PC faible — "j'ai un PC de merde" n'est pas une excuse. Il faut trouver une solution.
 - **À quoi ça sert :** l'enregistrement a plusieurs rôles : rassurer le joueur, permettre à la direction de revoir les preuves, vérifier que la procédure a été suivie et qu'on ne raconte pas n'importe quoi (éviter les faux dossiers), respecter les règles de confidentialité, et évaluer le niveau du SSer et son respect des protocoles.

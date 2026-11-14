@@ -110,7 +110,7 @@
                   "b": true
                 },
                 {
-                  "v": " c'est la base de tout screenshare légitime. Le staff a un accès de confiance à la machine privée d'un joueur, et ce pouvoir demande une honnêteté totale. Un ban doit reposer sur des preuves concrètes, claires, et coller aux règles écrites du serveur. Les suppositions, l'intuition, la réputation du joueur ou la pression pour ban n'ont rien à faire là-dedans. \"Un staffer ne ban pas pour éviter de se faire bypass, et il ne fait pas de suppositions.\" Il faut être honnête avec soi-même sur la solidité des preuves, avec le joueur sur ce qu'on a trouvé (dans les limites de la politique du serveur), et avec l'admin et la communauté via un rapport fidèle. Un ban faux ou mal justifié casse la confiance et la crédibilité de toute la modération. Le respect des règles et les faits vérifiables passent avant tout — c'est exactement l'esprit des principes Red Lotus, qui mettent la sécurité des joueurs et des données au même niveau que la rigueur de la procédure."
+                  "v": " c'est la base de tout screenshare légitime. Le staff a un accès de confiance à la machine privée d'un joueur, et ce pouvoir demande une honnêteté totale. Un ban doit reposer sur des preuves concrètes, claires, et coller aux règles écrites du serveur. Les suppositions, l'intuition, la réputation du joueur ou la pression pour ban n'ont rien à faire là-dedans. \"Un staffer ne ban pas pour éviter de se faire bypass, et il ne fait pas de suppositions.\" Il faut être honnête avec soi-même sur la solidité des preuves, avec le joueur sur ce qu'on a trouvé (dans les limites de la politique du serveur), et avec l'admin et la communauté via un rapport fidèle. Un ban faux ou mal justifié casse la confiance et la crédibilité de toute la modération. Le respect des règles et les faits vérifiables passent avant tout — c'est exactement l'esprit de ces principes, qui mettent la sécurité des joueurs et des données au même niveau que la rigueur de la procédure."
                 }
               ],
               "children": []
@@ -135,13 +135,13 @@
       "headings": []
     },
     "/screensharing-introducttion-and-principles/second-section-red-lotus-principles/red-lotus-principles-for-ethical-and-effective-screensharing": {
-      "title": "Les principes Red Lotus pour un screenshare propre et efficace",
+      "title": "Les principes pour un screenshare propre et efficace",
       "blocks": [
         {
           "type": "p",
           "runs": [
             {
-              "v": "Ces principes servent de base à tous les screenshares faits sous le cadre Red Lotus, ou qui s'en inspirent. L'ordre des priorités est simple : les gens et leurs données passent avant le résultat du check."
+              "v": "Ces principes servent de base à tous les screenshares faits dans ce cadre, ou qui s'en inspirent. L'ordre des priorités est simple : les gens et leurs données passent avant le résultat du check."
             }
           ]
         },
@@ -179,7 +179,7 @@
                   "b": true
                 },
                 {
-                  "v": " Red Lotus condamne clairement tout ce qui vise à casser ou affaiblir les règles et les procédures qui garantissent le fair-play, la transparence et la vie privée pendant un screenshare. Ça inclut les contournements de protocole, le fait d'ignorer les règles de preuve, ou de minimiser les droits du joueur et la protection de ses données pour aller plus vite. La crédibilité de tout le processus en dépend."
+                  "v": " on condamne clairement tout ce qui vise à casser ou affaiblir les règles et les procédures qui garantissent le fair-play, la transparence et la vie privée pendant un screenshare. Ça inclut les contournements de protocole, le fait d'ignorer les règles de preuve, ou de minimiser les droits du joueur et la protection de ses données pour aller plus vite. La crédibilité de tout le processus en dépend."
                 }
               ],
               "children": []
@@ -203,7 +203,7 @@
                   "b": true
                 },
                 {
-                  "v": " tout serveur, communauté ou équipe qui applique ou cite les règles Red Lotus s'engage à avoir un système de screenshare aligné sur la charte Red Lotus et ses principes. C'est un engagement à respecter les standards éthiques et procéduraux décrits ici, et à rester cohérent et fiable d'une implémentation à l'autre."
+                  "v": " tout serveur, communauté ou équipe qui applique ou cite ces règles s'engage à avoir un système de screenshare aligné sur cette charte et ses principes. C'est un engagement à respecter les standards éthiques et procéduraux décrits ici, et à rester cohérent et fiable d'une implémentation à l'autre."
                 }
               ],
               "children": []
@@ -220,7 +220,7 @@
           "type": "p",
           "runs": [
             {
-              "v": "Pour garantir un minimum de maturité, de compétence et de compréhension, Red Lotus fixe quelques prérequis pour ceux qui veulent faire des screenshares :"
+              "v": "Pour garantir un minimum de maturité, de compétence et de compréhension, quelques prérequis sont fixés pour ceux qui veulent faire des screenshares :"
             }
           ]
         },
@@ -287,7 +287,7 @@
           "type": "p",
           "runs": [
             {
-              "v": "Red Lotus impose des règles strictes sur la documentation des screenshares, principalement via l'enregistrement vidéo :"
+              "v": "Des règles strictes encadrent la documentation des screenshares, principalement via l'enregistrement vidéo :"
             }
           ]
         },
@@ -366,7 +366,7 @@
           "type": "p",
           "runs": [
             {
-              "v": "Pour protéger l'intégrité, l'équité et la justesse du screenshare, Red Lotus applique des mesures anti-corruption, pensées pour éviter les abus et garder des résultats impartiaux :"
+              "v": "Pour protéger l'intégrité, l'équité et la justesse du screenshare, on applique des mesures anti-corruption, pensées pour éviter les abus et garder des résultats impartiaux :"
             }
           ]
         },
@@ -19635,7 +19635,7 @@
                   "b": true
                 },
                 {
-                  "v": " captures d'écran, exports de logs (des scripts PowerShell ou des outils), et l'enregistrement vidéo obligatoire de tout le screenshare, comme l'exigent les principes Red Lotus et les règles du serveur."
+                  "v": " captures d'écran, exports de logs (des scripts PowerShell ou des outils), et l'enregistrement vidéo obligatoire de tout le screenshare, comme l'exigent les principes du screenshare et les règles du serveur."
                 }
               ],
               "children": []

@@ -1,7 +1,7 @@
 <!-- route: /screensharing-introducttion-and-principles/second-section-red-lotus-principles/anti-corruption-measures -->
 # Les mesures anti-corruption
 
-Pour protéger l'intégrité, l'équité et la justesse du screenshare, Red Lotus applique des mesures anti-corruption, pensées pour éviter les abus et garder des résultats impartiaux :
+Pour protéger l'intégrité, l'équité et la justesse du screenshare, on applique des mesures anti-corruption, pensées pour éviter les abus et garder des résultats impartiaux :
 
 - **À quoi ça sert :** ces mesures visent les fausses sanctions (des bans sans preuve valable), la corruption (échanger des faveurs contre un check plus cool ou un résultat décidé d'avance), les preuves plantées ou modifiées, et tout ce qui casse la sincérité du check et de ses conclusions.
 - **Zéro corruption :** toute forme de corruption, demandée ou proposée, entre SSer, joueurs ou autres membres du staff, est interdite et constitue une faute grave. Si un SSer ou l'équipe SS reçoit un avantage d'une source non standard (des dons de joueurs destinés spécifiquement à l'équipe SS, par exemple), ça doit être géré en toute transparence : en général on met en commun et on répartit équitablement, sous le contrôle des responsables, managers ou propriétaires du serveur.
